@@ -96,7 +96,7 @@ def predict_folder(folder_path, model, transform, device):
 # ==========================
 # 4. Run Inference on a Folder
 # ==========================
-folder_path = '/images/invalid_images'  # Replace with the folder path containing images
+folder_path = './images/invalid_images'  # Replace with the folder path containing images
 
 # Get predictions for all images in the folder
 predictions = predict_folder(folder_path, model, transform, device)
@@ -105,3 +105,16 @@ predictions = predict_folder(folder_path, model, transform, device)
 print("\nPredictions:")
 for image_name, class_name in predictions:
     print(f"Image: {image_name}, Predicted Class: {class_name}")
+
+# ==========================
+# 5. Save Predictions to a File
+# ==========================
+output_file_path = 'predictions.txt'  # Specify the file to save predictions
+
+# Write predictions to the file
+with open(output_file_path, 'w') as f:
+    f.write("Predictions:\n")
+    for image_name, class_name in predictions:
+        f.write(f"Image: {image_name}, Predicted Class: {class_name}\n")
+
+print(f"Predictions saved to {output_file_path}")
