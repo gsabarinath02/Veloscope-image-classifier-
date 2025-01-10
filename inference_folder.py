@@ -96,7 +96,7 @@ def predict_folder(folder_path, model, transform, device):
 # ==========================
 # 4. Run Inference on a Folder
 # ==========================
-folder_path = './images/invalid_images'  # Replace with the folder path containing images
+folder_path = './images/Valid_images'  # Replace with the folder path containing images
 
 # Get predictions for all images in the folder
 predictions = predict_folder(folder_path, model, transform, device)

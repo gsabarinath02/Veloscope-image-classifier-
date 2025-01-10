@@ -34,7 +34,11 @@ You can install the required packages with:
 ```bash
 pip install torch torchvision timm scikit-learn matplotlib seaborn pillow
 ```
+or you can also run 
 
+```bash
+pip install -r requirement.txt
+```
 ---
 
 ## **Setup**
